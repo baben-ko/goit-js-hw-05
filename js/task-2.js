@@ -5,6 +5,21 @@
 // followers - число
 // Добавь метод getInfo(), который, выводит строку: User ${имя} is ${возраст} years old and has ${кол-во фоловеров} followers
 
+class User {
+  constructor({ name, age, followers }) {
+    this.name = name;
+    this.age = age;
+    this.followers = followers;
+  }
+
+  getInfo() {
+
+    const userInfo = `User ${this.name} is ${this.age} years old and has ${this.followers} followers`
+    return console.log(userInfo); 
+  }
+}
+
+
 const mango = new User({
   name: 'Mango',
   age: 2,
