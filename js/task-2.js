@@ -15,7 +15,7 @@ class User {
   getInfo() {
 
     const userInfo = `User ${this.name} is ${this.age} years old and has ${this.followers} followers`
-    return console.log(userInfo); 
+    console.log(userInfo); 
   }
 }
 

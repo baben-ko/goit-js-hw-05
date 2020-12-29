@@ -8,33 +8,46 @@
 
 class Storage {
   constructor(items) {
-    this._items = items;
+    this.items = items;
   }
   
   getItems() {
-    return this._items;
+    return this.items;
   }
 
   addItem(item) {
-    this._items.push(item);
+    this.items.push(item);
        
   }
 
-  removeItem(removedItem) {
 
-      const newItems = [];
 
-      for (const item of this._items) {
 
-        if (item === removedItem) continue;
+  removeItem(item) {
+
+    const index = this.items.indexOf(item);
+
+    if (index !== -1) {
+      this.items.splice(index, 1);
+    }
+  }
+
+}
+  // removeItem(removedItem) {
+
+  //     const newItems = [];
+
+  //     for (const item of this._items) {
+
+  //       if (item === removedItem) continue;
          
-        newItems.push(item);
-      }
-      this._items = newItems;
-    }  
+  //       newItems.push(item);
+  //     }
+  //     this._items = newItems;
+  //   }  
     // const newItems = this._items.filter(item => item !== this.removedItem);
     // this._items = newItems;
-}
+
 
 const storage = new Storage([
   'Нанитоиды',
